@@ -16,7 +16,6 @@ const Registration = (props) => {
 
   const [formValid, setFormValid] = useState(false);
 
-  // если все хуки тру то форма валидна и отправляется для этого проверка введены ли корректно емаил пароль
   useEffect(() => {
     if ([emailError, passwordError].includes('incorrectly')) {
       setFormValid(false);
