@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import "./auth.css";
 
+// import {useNavigate} from 'react-router-dom';
+
+
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ email: "", password: "" });
+  
   const submitHandler = (event) => {
-    event.preventDefault();
-    Login(details);
-  };
+          event.preventDefault();
+          Login(details);
+        };
 
+  // const handleButton = 
+  //  useNavigate();
+  //   handleButton('/main');
+  //  }
+        
   return (
     <form onSubmit={submitHandler}>
       <div className="form-inner">
@@ -37,7 +46,9 @@ function LoginForm({ Login, error }) {
             value={details.password}
           />
         </div>
-        <button className="button">Continue</button>
+        <button
+        // onClick={handleButton}
+        className="button">Continue</button>
       </div>
     </form>
   );
